@@ -1,0 +1,4 @@
+package pablo.tzeliks.model.entity;
+
+public class TheBigBadWolf {
+}
