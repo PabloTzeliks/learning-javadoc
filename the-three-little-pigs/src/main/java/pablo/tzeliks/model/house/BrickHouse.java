@@ -1,5 +1,12 @@
 package pablo.tzeliks.model.house;
 
+/**
+ * @author Pablo Ruan Tzeliks
+ * @version 1.0.0
+ * <p><em>Interface</em> responsável por ditar métodos necessários para <strong>Classificar</strong> uma <strong>Casa</strong></p>
+ * @since 2025-11-25
+ */
+
 public class BrickHouse implements ICasa {
 
     private final Material material;
