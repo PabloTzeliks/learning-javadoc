@@ -1,17 +1,23 @@
 package pablo.tzeliks.model.house;
 
 /**
+ * Representa uma casa construída de <strong>Palha</strong>.
+ * <p>Esta implementação possui baixa resistência estrutural baseada no material {@link Material#STRAW}.</p>
+ *
  * @author Pablo Ruan Tzeliks
  * @version 1.0.0
- * <p><em>Interface</em> responsável por ditar métodos necessários para <strong>Classificar</strong> uma <strong>Casa</strong></p>
  * @since 2025-11-25
+ * @see IHouse
  */
-
-public class StrawHouse implements ICasa {
+public class StrawHouse implements IHouse {
 
     private final Material material;
     private boolean status;
 
+    /**
+     * Construtor da Casa de Palha.
+     * @param status O estado inicial da casa (true para inteira/de pé).
+     */
     public StrawHouse(boolean status) {
         this.material = Material.STRAW;
         this.status = status;
@@ -27,27 +33,20 @@ public class StrawHouse implements ICasa {
         return material.getStrength();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean resisteAoSopro(int forcaDoSopro) {
-
         if (material.getStrength() < forcaDoSopro) {
-
             this.status = false;
-
             return status;
         }
-
         return status;
     }
 
     @Override
     public String statusAtual() {
-        if (status) {
-
-            return "De Pé";
-        } else {
-
-            return "Destruída";
-        }
+        return status ? "De Pé" : "Destruída";
     }
 }

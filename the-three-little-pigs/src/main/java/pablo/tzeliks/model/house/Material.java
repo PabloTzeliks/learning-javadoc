@@ -9,9 +9,9 @@ package pablo.tzeliks.model.house;
 
 public enum Material {
 
-    STRAW("Straw", 200),
-    WOOD("Wood", 450),
-    BRICK("Brick", 1000);
+    STRAW("Straw", 2),
+    WOOD("Wood", 4),
+    BRICK("Brick", 12);
 
     private final String name;
     private final int strength;
